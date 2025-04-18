@@ -1,0 +1,53 @@
+body{
+    background-color: 	#fcf8f8;
+}
+html {
+    scroll-behavior: smooth;
+}
+.title{
+    text-align: center;
+    margin-left: 1%;
+    font-family: times;
+    color: black;
+
+}
+.center{
+    display: block;
+    margin-left: 26%;
+    margin-right: 0%;
+    width: 50%;
+}
+.midTable{
+    text-align:center;
+    margin-top: 30px;
+    margin-bottom:40px;
+    margin-left: 12%
+
+}
+.middle{
+    text-align:center;
+    color:grey;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.tableLines{
+    background: black;
+}
+
+.industries{
+    color: gray;
+    font-size: 10px;
+    text-align: center;
+    margin-left: 43%;
+}

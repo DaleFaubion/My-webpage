@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- 
+  Author: Dale Faubion
+  This is my landing page/webpage to showcase projects and such
+-->
+<html>
+
+<head>
+  <title>Dale Faubion</title>
+
+  <!-- meta data for connecting the js and css sheets to the html body  -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <!-- The nav bar from W3Schools  -->
+  <ul class="top_list">
+    <li class="top_list_item"><a class="active" href="#home">Home</a></li>
+    <li class="top_list_item"><a href="resume.html">Resume</a></li>
+    <li class="top_list_item"><a href="otherProjects.html">Other Projects</a></li>
+    <li class="top_list_right"><a href="https://www.linkedin.com/in/dale-faubion">LinkedIn</a></li>
+  </ul>
+
+  <div class="alert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    Please Note: This website is still being updated.
+  </div>
+
+  <div class="">
+    <img alt="Picture of me" class="slideImg" src="https://s3.us-east-1.amazonaws.com/faubion.com/DSC_2639.JPG">
+  </div>
+
+  <!-- Slideshow container -->
+  <div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 2</div>
+      <a href="otherProjects.html">
+        <img alt="Off-Grid Calculator project showcase" class="slideImg" src="https://s3.us-east-1.amazonaws.com/faubion.com/Off-Grid+Calc+cover+3.png">
+      </a>
+      <div class="text">Click to learn more!</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 2</div>
+      <a href="otherProjects.html">
+        <img alt="Coffee Calculator project showcase" class="slideImg" src="https://s3.us-east-1.amazonaws.com/faubion.com/Coffee+Calc+Cover.PNG">
+      </a>
+      <div class="text">Click to learn more!</div>
+    </div>
+
+  </div>
+  <br>
+
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="showSlides(1)"></span>
+    <span class="dot" onclick="showSlides(2)"></span>
+  </div>
+
+
+  <h1 class="title">Dale Faubion</h1>
+  <h3 class="minor_paragraph">Hard Work....Determined....Personable</h3>
+
+  <hr class="line">
+
+  <h3 class="minor_paragraph">What I'm up to these days:</h3>
+  
+
+
+
+  <script src="script.js"></script>
+</body>
+
+
+<footer id="footer">
+  <p class="center">
+    Created By: Dale Faubion
+    <br>
+    All rights reserved
+  </p>
+</footer>
+
+
+
+</html>

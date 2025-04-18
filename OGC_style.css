@@ -1,0 +1,86 @@
+/* Makes the page scroll smoothly*/
+html {
+    scroll-behavior: smooth;
+}
+/*  W3Schools color */
+body {
+    background-color: #F0F8FF;
+}
+/* makes the footer fill the bottom of the page */
+#footer {
+    padding: 5px;
+    background-color:  #003566;
+    color: #b3daff;
+    margin-bottom: -50%;
+}
+/* W3Schools nav bar idea*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:  #003566;
+}
+/* Makes the "list" in the nav bar left justified */
+li {
+    float: left;
+}
+/* styles the nav bar */
+li a {
+    display: block;
+    color: #b3daff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the color of nav on hover*/
+li a:hover {
+    background-color:#0077e6;
+}
+/* Should make the active tab on the nac bar a lighter color*/
+.active {
+    background-color: #4CAF50;
+}
+/*this styles the text on the page so it is in the center and sizes itself with the window size*/
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
+}
+/* Makes the image and the text underneath centered and sizes with page*/
+.centerImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 60%;
+    text-align: center;
+}
+/*styles the buttons of my page*/
+.button {
+    position: absolute;
+    top: 50%;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    color: #99ceff;
+}
+/*styles the tables on the page*/
+.table {
+    text-align: center;
+    display: block;
+    margin-top: 30px;
+    margin-bottom:40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*I made this to solve the problem of my buttons pushing everything else onto another line*/
+.inline {
+    display: inline-block;
+}
+/*Makes the horizontal rule bigger and makes the page have a more professional and divided feel*/
+.line {
+    border-top: 10px solid #003566;
+}

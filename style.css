@@ -1,0 +1,269 @@
+body{
+  background-color: 	#F0F8FF;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.title{
+  text-align: center;
+  margin-left: 1%;
+  font-family: times, serif;
+  color: black;
+}
+.paragraph{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  margin-top: 5%;
+  font-family: times, serif;
+  color: black;
+}
+.paragraph_left{
+  text-align: left;
+  margin-left: 5%;
+  font-family: times, serif;
+  color: black;
+}
+.tab{
+  margin-left: 7%;
+}
+.minor_paragraph{
+  text-align: center;
+  margin-left: 1%;
+  font-family: times, serif;
+  color: #404040;
+}
+/* Class for centering images*/
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-top: 2%;
+  text-align: center;
+}
+/* Class for centering images that are smaller*/
+.minor_center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+  margin-top: 2%;
+  text-align: center;
+}
+
+
+
+/**           NAV BAR           */
+
+
+/* W3Schools nav bar idea*/
+.top_list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:  #00284d;
+}
+/* Makes the "list" in the nav bar left justified */
+.top_list_item {
+  float: left;
+}
+.top_list_right {
+  float: right;
+}
+/* styles the nav bar */
+li a {
+  display: block;
+  color: #b3daff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the color of nav on hover*/
+li a:hover {
+  background-color:#0077e6;
+}
+
+.hyperlink{
+  display: inline;
+  color: #0077e6;
+  text-align: match-parent;
+}
+.hyperlink:hover{
+  display: inline;
+  color: #002dcd;
+  text-align: match-parent;
+}
+/* Should make the active tab on the nav bar a lighter color*/
+.active {
+  background-color: #004280;
+}
+
+/* Makes the horizontal rule bigger and makes the page have a more professional and divided feel*/
+.line {
+  border-top: 10px solid #003566;
+}
+
+#footer {
+  padding: 5px;
+  background-color:  #003566;
+  color: #b3daff;
+  margin-bottom: -50%;
+}
+
+
+
+
+/**             Alert box Style             */
+
+
+/* The alert box that the page is in development still */
+.alert {
+  /* To change alert to display above instead of over content,
+  change position to relative, then comment out beneath until next comment.
+   */
+  position: absolute;
+  z-index: 9999;
+  left: 50%;
+  transform: translate(-50%);
+  /* Comment above three to change to relative position */
+  width: 500px;
+  padding: 15px;
+  background-color: #FFFFCC;
+  color: black;
+  opacity: 1;
+  transition: opacity 0.6s; /* 600ms to fade out */
+  margin: auto auto 5px;
+  text-align: center;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  border-radius: 8px; /* Round the corners */
+}
+
+/* The Close button styling */
+.closebtn {
+  margin-left: 15px;
+  color: grey;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: #0f294c;
+}
+
+
+
+
+/**                  Slideshow Stuff                   */
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+.mySlides {
+  display: flex;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  /*width: 100vw;  !* Full viewport width *!*/
+  /*max-height: 75vh;  !* % of the viewport height *!*/
+  /*overflow: hidden;*/
+  /*position: relative;*/
+
+  max-height: 650px;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+}
+
+.slideImg {
+  width:100vw;
+  height:100%;
+  flex-shrink: 0;
+  background-size: cover;
+  background-position: center;
+
+  /*width:100vw;*/
+  /*height:100%;*/
+  /*object-fit: cover;*/
+}
+
+.doubleSlideImg {
+  width: 49.6%;
+  object-fit: cover;
+}
+
+
+/* Caption text */
+.text {
+  color: #fdfdfd;
+  background-color: rgba(3, 69, 162, 0.87);
+  font-size: 15px;
+  padding: 8px 8px;
+  position: absolute;
+  bottom: 8px;
+  width: 150px;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  border-radius: 10px; /* Round the corners */
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  background-color: rgba(3, 69, 162, 0.51);
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dot navigation */
+.dot-container {
+  text-align: center;
+  margin: 2px;
+}
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #033d8d;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+

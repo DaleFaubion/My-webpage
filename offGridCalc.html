@@ -1,0 +1,474 @@
+<!--
+Calculator for off the grid solar usage
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- metadata for connecting JS and CSS to HTML  -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Off Grid Calculator</title>
+    <link href="OGC_style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+
+<body>
+
+<!-- The nav bar from W3Schools  -->
+<ul>
+    <li><a href="otherProjects.html">Back to Other Projects</a></li>
+    <li><a href="#calculator">Calculator</a></li>
+    <li><a href="#more">More About Solar!</a></li>
+</ul>
+<!-- The image at the top of the page  -->
+<img src="https://s3.us-east-1.amazonaws.com/faubion.com/SolarPanels.jpg"
+     alt="Beautiful Solar energy" class="centerImg">
+
+
+<h3 class="centerImg">
+    Many are switching to solar or off-grid living but don't know how many solar panels to buy and how much stored
+    energy in the form of batteries they need. The Off Grid Calculator can help millions make the switch comfortably to
+    green solar energy!
+</h3>
+
+
+<hr class="line">
+
+
+
+
+
+<!-- Table holding the total appliances, watts needed, Recommend solar panels button, watts Produced, Recommend batteries button, and Storable watts. -->
+<table class="table" border="0" width="600px">
+    <thead>
+    <tr>
+        <th>Total Appliances</th>
+        <th>Total Watts Needed</th>
+        <th>
+            <div>
+                <button type="button" onclick="solarRec()">Recommend Solar Panels*</button>
+            </div>
+        </th>
+        <th>Watts Produced</th>
+        <th>
+            <div>
+                <button type="button" onclick="batteryRec()">Recommend Batteries*</button>
+
+            </div>
+        </th>
+        <th>Storable Watts</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>
+            <p class="inline" id="totalApps">0</p>
+        </td>
+        <td>
+            <p class="inline" id="totalWatts">0</p>
+        </td>
+        <td>
+            <p class="inline" id="solarPanels">0</p>
+        </td>
+        <td>
+            <p class="inline" id="solarWattsDay">0</p>
+        </td>
+        <td>
+            <p class="inline" id="batteries">0</p>
+        </td>
+        <td>
+            <p class="inline" id="wattsStore">0</p>
+        </td>
+    </tr>
+</table>
+
+
+<!-- Table containing the options for appliances and watts -->
+<table class="table" border="0" width="750px">
+    <thead>
+
+    <tr>
+        <th>Appliance</th>
+        <th>Watts Per Hour</th>
+        <th>Appliance</th>
+        <th>Watts Per Hour</th>
+        <th>Appliance</th>
+        <th>Watts Per Hour</th>
+
+    </tr>
+
+    </thead>
+    <tbody>
+    <!-- This is the table containing the buttons and info on each appliance  -->
+    <!--  The first row of the table  -->
+    <tr>
+        <td>
+            <div>
+                <button type="button" onclick="addCoffee()">+</button>
+                <p class="inline"><a name="calculator">Coffee Maker</a></p>
+
+            </div>
+        </td>
+
+        <td>
+
+            <p class="inline">900</p>
+
+        </td>
+
+        <td>
+            <div>
+
+                <button type="button" onclick="addWash()">+</button>
+                <p class="inline">Washing Machine</p>
+
+            </div>
+        </td>
+        <td>
+            <p class="inline">800</p>
+        </td>
+        <td>
+            <div>
+
+                <button type="button" onclick="addDry()">+</button>
+                <p class="inline">Electric Dryer</p>
+
+            </div>
+        </td>
+        <td>
+            <p class="inline">3000</p>
+        </td>
+
+    </tr>
+    <!--  The second row in the table with the buttons  -->
+    <tr>
+        <td>
+            <div>
+                <button type="button" onclick="addMicro()">+</button>
+                <p class="inline">Microwave</p>
+
+            </div>
+        </td>
+
+        <td>
+
+            <p class="inline">1200</p>
+
+        </td>
+
+        <td>
+            <div>
+
+                <button type="button" onclick="addBulbs()">+</button>
+                <p class="inline">40 Watt Bulbs</p>
+
+            </div>
+        </td>
+        <td>
+            <p class="inline">5000</p>
+        </td>
+        <td>
+            <div>
+
+                <button type="button" onclick="addWHeater()">+</button>
+                <p class="inline">Water Heater</p>
+
+            </div>
+        </td>
+        <td>
+            <p class="inline">4000</p>
+        </td>
+
+    </tr>
+    <!-- The third row of the table with the buttons  -->
+    <tr>
+        <td>
+            <div>
+                <button type="button" onclick="addFridge()">+</button>
+                <p class="inline">Refrigerator</p>
+
+            </div>
+        </td>
+
+        <td>
+
+            <p class="inline">1500</p>
+
+        </td>
+
+        <td>
+            <div>
+
+                <button type="button" onclick="addBTU()">+</button>
+                <p class="inline">12,000 BTU</p>
+
+            </div>
+        </td>
+        <td>
+            <p class="inline">1400</p>
+        </td>
+        <td>
+            <div>
+
+                <button type="button" onclick="addCFan()">+</button>
+                <p class="inline">Ceiling Fan</p>
+
+            </div>
+        </td>
+        <td>
+            <p class="inline">125</p>
+        </td>
+
+    </tr>
+    <!--Fourth row of the table-->
+    <tr>
+        <td>
+            <div>
+                <button type="button" onclick="addHairDry()">+</button>
+                <p class="inline">Hair Dryer</p>
+
+            </div>
+        </td>
+
+        <td>
+
+            <p class="inline">1500</p>
+
+        </td>
+
+        <td>
+            <div>
+
+                <button type="button" onclick="addLaptop()">+</button>
+                <p class="inline">Laptop Computer</p>
+
+            </div>
+        </td>
+        <td>
+            <p class="inline">50</p>
+        </td>
+        <td>
+            <div>
+
+                <button type="button" onclick="addFreezer()">+</button>
+                <p class="inline">15 ft³ Freezer</p>
+
+            </div>
+        </td>
+        <td>
+            <p class="inline">35</p>
+        </td>
+
+    </tr>
+    <!--Fifth row of the table-->
+    <tr>
+        <td>
+            <div>
+                <button type="button" onclick="addTV()">+</button>
+                <p class="inline">40" LED TV</p>
+
+            </div>
+        </td>
+
+        <td>
+
+            <p class="inline">31</p>
+
+        </td>
+
+        <td>
+            <div>
+
+                <button type="button" onclick="addToaster()">+</button>
+                <p class="inline">Toaster</p>
+
+            </div>
+        </td>
+        <td>
+            <p class="inline">1200</p>
+        </td>
+        <td>
+            <div>
+
+                <button type="button" onclick="add5hpPump()">+</button>
+                <p class="inline">.5 hp well pump</p>
+
+            </div>
+        </td>
+        <td>
+            <p class="inline">900</p>
+        </td>
+
+    </tr>
+    <!--Sixth row of the table-->
+    <tr>
+        <td>
+            <div>
+                <button type="button" onclick="addXBOX()">+</button>
+                <p class="inline">XBOX 360</p>
+
+            </div>
+        </td>
+
+        <td>
+
+            <p class="inline">180</p>
+
+        </td>
+
+        <td>
+            <div>
+
+                <button type="button" onclick="addPS4()">+</button>
+                <p class="inline">PS4</p>
+
+            </div>
+        </td>
+        <td>
+            <p class="inline">150</p>
+        </td>
+        <td>
+            <div>
+
+                <button type="button" onclick="add1hpPump()">+</button>
+                <p class="inline">1hp well pump</p>
+
+            </div>
+        </td>
+        <td>
+            <p class="inline">2000</p>
+        </td>
+
+    </tr>
+    <!--Seventh row of the table-->
+    <tr>
+        <td>
+            <div>
+                <button type="button" onclick="addDVDPlayer()">+</button>
+                <p class="inline">DVD Player</p>
+
+            </div>
+        </td>
+
+        <td>
+
+            <p class="inline">15</p>
+
+        </td>
+
+        <td>
+            <div>
+
+                <button type="button" onclick="addRVWater()">+</button>
+                <p class="inline">RV Water Pump</p>
+
+            </div>
+        </td>
+        <td>
+            <p class="inline">50</p>
+        </td>
+        <td>
+            <div>
+
+                <button type="button" onclick="addDeskPC()">+</button>
+                <p class="inline">Desktop PC</p>
+
+            </div>
+        </td>
+        <td>
+            <p class="inline">200</p>
+        </td>
+
+    </tr>
+    <!--Eighth row of the table-->
+    <tr>
+        <td>
+            <div>
+                <button type="button" onclick="addDishwasher()">+</button>
+                <p class="inline">Dishwasher</p>
+
+            </div>
+        </td>
+
+        <td>
+
+            <p class="inline">1800</p>
+
+        </td>
+
+        <td>
+            <div>
+
+                <button type="button" onclick="addRVFurnaceFan()">+</button>
+                <p class="inline">RV Furnace Fan</p>
+
+            </div>
+        </td>
+        <td>
+            <p class="inline">100</p>
+        </td>
+        <td>
+            <div>
+
+                <button type="button" onclick="addIron()">+</button>
+                <p class="inline">Clothes Iron</p>
+
+            </div>
+        </td>
+        <td>
+            <p class="inline">900</p>
+        </td>
+
+    </tr>
+
+    </tbody>
+
+
+</table>
+
+<p class="center">
+    *All appliance wattages are an average estimate based on general usage. Wattage may vary with model.
+</p>
+
+
+<h3 class="centerImg"><a name="more">Producing Energy</a></h3>
+<p class="center">
+    For producing energy I chose a 240 watt polycrystalline solar panel. The reason I chose this panel is because it is
+    more affordable and common than monocrystalline solar panels, however, this is a baseline to be used for identifying
+    how many panels are needed. Both polycrystalline and monocrystalline will produce the same amount of energy but the
+    more efficient monocrystalline panel may be smaller.
+</p>
+
+
+<h3 class="centerImg">Storing Energy </h3>
+<p class="center">
+    For energy storage I chose a common 1000 Watt RV battery for calculating needed stored energy. There are other
+    options for storing energy that are measured in watt hours but I chose a readily available option for storing energy
+    to solve the need for energy when solar energy is not being produced such as at night.
+</p>
+
+
+<h3 class="centerImg">Solution</h3>
+<p class="center">
+    This program helps users understand how our consumption affects the need for producing and storing energy.
+    <br><br><br><br>
+</p>
+
+
+<script src="OGC_script.js"></script>
+</body>
+<footer id="footer">
+    <p class="center">
+        Copyright © 2020
+        <br>
+        All rights reserved
+    </p>
+</footer>
+
+</html>

@@ -1,0 +1,205 @@
+<!--
+Names: Weston Hanson, Dale Faubion, Burma Rysmatova, Maci Kjorsvik
+Date Due: 11/13/19
+Description: This is the final product of the Coffee Calculator. It calulates the revenue and the profit, after tax, of real Starbucks drinks. It then takes those numbers and prints them to a table.
+-->
+
+
+
+<!DOCTYPE html> <!-- Dale Faubion-->
+<html>
+<head>
+    <title>Coffee Calculator</title>
+
+
+
+
+    <!-- meta data for connecting the js and css sheets to the html body  -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="CC_style.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+<a href="otherProjects.html">Back to Other Projects</a>
+<img src="https://s3.us-east-1.amazonaws.com/faubion.com/CoffeCups.avif" alt="coffee cups"   class="center">
+
+<h1 class ="title">Coffee Calculator</h1>
+<hr>
+<!-- this is the button on the page -->
+<div class="wrapper">
+    <button  type="button"
+             onclick="start()" >
+        Click to calculate coffee.</button>
+</div>
+
+</form>
+<!-- this is the table that outputs the revenue and profit -->
+<table  class="midTable" border="1" style="width:75%">
+    <thead>
+    <tr>
+        <th>Drink</th>
+        <th>Amount Bought </th>
+        <th>Revenue $</th>
+        <th>Profit $</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td> <b>Grande Mocha</b> </td>
+        <td>
+            <p id='grandeMochaAmount'></p>
+        </td>
+        <td>
+            <p id='grandeMochaRev'></p>
+        </td>
+        <td>
+            <p id='grandeMochaPro'></p>
+        </td>
+    </tr>
+
+    <tr>
+        <td> <b> Tall Mocha </b> </td>
+        <td>
+            <p id='tallMochaAmount'></p>
+        </td>
+        <td>
+            <p id='tallMochaRev'></p>
+        </td>
+        <td>
+            <p id='tallMochaPro'></p>
+        </td>
+    </tr>
+
+    <tr>
+        <td> <b> Small Mocha </b> </td>
+        <td>
+            <p id='smallMochaAmount'></p>
+        </td>
+        <td>
+            <p id='smallMochaRev'></p>
+        </td>
+        <td>
+            <p id='smallMochaPro'></p>
+        </td>
+    </tr>
+
+    <tr class= "tableLines"><!-- Weston Hanson -->
+        <td > <b>  </b> </td>
+        <td>
+
+        </td>
+
+        <td>
+
+        </td>
+        <td>
+
+        </td>
+    </tr>
+
+    <tr>
+        <td> <b>Grande Dark Roast </b></td>
+        <td>
+            <p id='grandeDarkAmount'></p>
+        </td>
+        <td>
+            <p id='grandeDarkRev'></p>
+        </td>
+        <td>
+            <p id='grandeDarkPro'></p>
+        </td>
+    </tr>
+
+    <tr>
+        <td> <b>Tall Dark Roast </b></td>
+        <td>
+            <p id='tallDarkAmount'></p>
+        </td>
+        <td>
+            <p id='tallDarkRev'></p>
+        </td>
+        <td>
+            <p id='tallDarkPro'></p>
+        </td>
+    </tr>
+
+    <tr>
+        <td> <b>Small Dark Roast </b></td>
+        <td>
+            <p id='smallDarkAmount'></p>
+        </td>
+        <td>
+            <p id='smallDarkRev'></p>
+        </td>
+        <td>
+            <p id='smallDarkPro'></p>
+        </td>
+    </tr>
+
+    <tr class= "tableLines"> <!-- Weston Hanson -->
+        <td> <b>  </b> </td>
+        <td>
+
+        </td>
+        <td>
+
+        </td>
+        <td>
+
+        </td>
+    </tr>
+
+    <tr>
+        <td> <b> Grande Hot Chocolate </b></td>
+        <td>
+            <p id='grandeHotAmount'></p>
+        </td>
+        <td>
+            <p id='grandeHotRev'></p>
+        </td>
+        <td>
+            <p id='grandeHotPro'></p>
+        </td>
+
+    </tr>
+
+    <tr>
+        <td> <b> Tall Hot Chocolate </b></td>
+        <td>
+            <p id='tallHotAmount'></p>
+        </td>
+        <td>
+            <p id='tallHotRev'></p>
+        </td>
+        <td>
+            <p id='tallHotPro'></p>
+        </td>
+
+    </tr>
+
+    <tr>
+        <td> <b> Small Hot Chocolate </b></td>
+        <td>
+            <p id='smallHotAmount'></p>
+        </td>
+        <td>
+            <p id='smallHotRev'></p>
+        </td>
+        <td>
+            <p id='smallHotPro'></p>
+        </td>
+    </tr>
+
+
+</table>
+
+
+<a class = 'industries'> Copyright © 2019 Of Quoffee Industries. All rights reserved. </a>
+
+
+<script src="CC_script.js"></script>
+
+</body>
+</html>
