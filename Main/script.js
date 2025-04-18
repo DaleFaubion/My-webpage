@@ -18,7 +18,7 @@ for (i = 0; i < close.length; i++)
         // Set it to invisible: opacity = "0"
         div.style.opacity = "0";
         // Fade the view until it is gone, disappearing after the time below (.6 seconds)
-        setTimeout(function(){ div.style.display = "none"; }, 600); // Timeout after .6 seconds and hide
+        setTimeout(function(){ div.style.display = "none"; }, 700); // Timeout after .6 seconds and hide
     }
 }
 

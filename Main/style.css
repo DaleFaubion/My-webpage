@@ -22,7 +22,7 @@ html {
 .title{
   text-align: center;
   font-weight: 400;
-  font-size: 430%;
+  font-size: 400%;
   margin-top: 8vh;
   margin-left: 1%;
   color: black;
@@ -46,7 +46,7 @@ html {
 .minor_paragraph{
   text-align: center;
   margin-left: 1%;
-  color: #404040;
+  color: #262626;
 }
 /* Class for centering images*/
 .center {
@@ -55,6 +55,7 @@ html {
   margin-right: auto;
   width: 50%;
   margin-top: 2%;
+  padding-top: 8vh;
   text-align: center;
 }
 /* Class for centering images that are smaller*/
@@ -67,6 +68,15 @@ html {
   text-align: center;
 }
 
+.resume {
+  background-color: rgba(240, 246, 253, 0.5);
+  /* Center it */
+  display: block;
+  width: 75vw;
+  margin: 8vh auto;
+  border-radius: 10px; /* Round the corners */
+}
+
 
 
 /**           NAV BAR           */
@@ -74,6 +84,7 @@ html {
 
 /* W3Schools nav bar idea*/
 .top_list {
+  z-index: 10000;
   list-style-type: none;
   position: sticky;
   top: 0;
@@ -85,11 +96,11 @@ html {
 /* Makes the "list" in the nav bar left justified */
 .top_list_item {
   float: left;
-  font-size: 120%;
+  font-size: 90%;
 }
 .top_list_right {
   float: right;
-  font-size: 120%;
+  font-size: 90%;
 }
 /* styles the nav bar */
 li a {
@@ -127,10 +138,10 @@ li a:hover {
 }
 
 #footer {
+  text-align: center;
   padding: 5px;
   background-color:  #003566;
   color: #b3daff;
-  margin-bottom: -50%;
 }
 
 
@@ -269,7 +280,7 @@ li a:hover {
 /* Fading animation */
 .fade {
   animation-name: fade;
-  animation-duration: 2s;
+  animation-duration: 2.3s;
 }
 
 @keyframes fade {
