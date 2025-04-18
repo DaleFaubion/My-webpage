@@ -1,14 +1,30 @@
+* {
+  font-family: "Centaur", serif;
+  font-optical-sizing: auto;
+}
+
 body{
-  background-color: 	#F0F8FF;
+  background-image: url(https://s3.us-east-1.amazonaws.com/faubion.com/43589.JPEG);
+  margin-left: 0;
+  margin-right: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center bottom;
+
+  /*background-color: 	#F0F8FF;*/
 }
 
 html {
   scroll-behavior: smooth;
 }
+
 .title{
   text-align: center;
+  font-weight: 400;
+  font-size: 430%;
+  margin-top: 8vh;
   margin-left: 1%;
-  font-family: times, serif;
   color: black;
 }
 .paragraph{
@@ -17,13 +33,11 @@ html {
   margin-right: auto;
   width: 75%;
   margin-top: 5%;
-  font-family: times, serif;
   color: black;
 }
 .paragraph_left{
   text-align: left;
   margin-left: 5%;
-  font-family: times, serif;
   color: black;
 }
 .tab{
@@ -32,7 +46,6 @@ html {
 .minor_paragraph{
   text-align: center;
   margin-left: 1%;
-  font-family: times, serif;
   color: #404040;
 }
 /* Class for centering images*/
@@ -62,6 +75,8 @@ html {
 /* W3Schools nav bar idea*/
 .top_list {
   list-style-type: none;
+  position: sticky;
+  top: 0;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -70,9 +85,11 @@ html {
 /* Makes the "list" in the nav bar left justified */
 .top_list_item {
   float: left;
+  font-size: 120%;
 }
 .top_list_right {
   float: right;
+  font-size: 120%;
 }
 /* styles the nav bar */
 li a {
@@ -105,7 +122,8 @@ li a:hover {
 
 /* Makes the horizontal rule bigger and makes the page have a more professional and divided feel*/
 .line {
-  border-top: 10px solid #003566;
+  border-top: 8px solid #003566;
+  width: 60vw;
 }
 
 #footer {
@@ -181,18 +199,24 @@ li a:hover {
   /*overflow: hidden;*/
   /*position: relative;*/
 
-  max-height: 650px;
+
+  height: 40vw;
+  width: 75vw;
   position: relative;
   overflow: hidden;
   margin: auto;
 }
 
 .slideImg {
-  width:100vw;
+  width: 75vw;
+  max-width: 1000px;
   height:100%;
   flex-shrink: 0;
   background-size: cover;
   background-position: center;
+  display: block;
+  margin: auto;
+
 
   /*width:100vw;*/
   /*height:100%;*/
@@ -221,15 +245,6 @@ li a:hover {
   border-radius: 10px; /* Round the corners */
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  background-color: rgba(3, 69, 162, 0.51);
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
 
 /* The dot navigation */
 .dot-container {
