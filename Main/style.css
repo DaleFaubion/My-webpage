@@ -69,6 +69,7 @@ html {
   text-align: center;
 }
 
+/* Styles the resume page to have the white background to make the text more readable. */
 .resume {
   background-color: rgba(240, 246, 253, 0.5);
   /* Center it */
@@ -82,9 +83,11 @@ html {
   display: inline;
   color: #0077e6;
   text-align: match-parent;
+  text-decoration: none;
 }
 .inline_hyperlink:hover{
   display: inline;
+  color: #033d8d;
   text-decoration: underline;
   text-align: match-parent;
 }
