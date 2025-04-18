@@ -1,3 +1,8 @@
+* {
+    font-family: "Centaur", serif;
+    font-optical-sizing: auto;
+}
+
 /* Makes the page scroll smoothly*/
 html {
     scroll-behavior: smooth;
@@ -40,7 +45,7 @@ li a:hover {
 }
 /* Should make the active tab on the nac bar a lighter color*/
 .active {
-    background-color: #4CAF50;
+    background-color: #004280;
 }
 /*this styles the text on the page so it is in the center and sizes itself with the window size*/
 .center {
@@ -71,10 +76,7 @@ li a:hover {
 .table {
     text-align: center;
     display: block;
-    margin-top: 30px;
-    margin-bottom:40px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 30px auto 40px;
 }
 /*I made this to solve the problem of my buttons pushing everything else onto another line*/
 .inline {

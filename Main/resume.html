@@ -17,10 +17,11 @@
 
     <!-- The nav bar from W3Schools  -->
     <ul class = "top_list">
-      <li class = "top_list_item"><a href="index.html">Home</a></li>
-      <li class = "top_list_item"><a class = "active" href="#resume">Resume</a></li>
-      <li class = "top_list_item"><a href="otherProjects.html">Other Projects</a></li>
-      <li class="top_list_right"><a href="https://www.linkedin.com/in/dale-faubion">LinkedIn</a></li>
+      <li class = "top_list_item"><a class = "nav_a" href="index.html">Home</a></li>
+      <li class = "top_list_item"><a class = "nav_a active" href="#resume">Resume</a></li>
+      <li class = "top_list_item"><a class = "nav_a" href="otherProjects.html">Other Projects</a></li>
+      <li class="top_list_right"><a class = "nav_a" href="https://www.linkedin.com/in/dale-faubion">LinkedIn</a></li>
+      <li class="top_list_right"><a class="nav_a" href="https://github.com/DaleFaubion">GitHub</a></li>
     </ul>
 
     <div class = "resume">
@@ -45,25 +46,49 @@
       <!-- List for Skills -->
       <ul>
         <li class = "tab">
-          <strong>Programming: </strong>
-          HTML, CSS, JavaScript (2 years), Java and Python (5 years),
-          Assembly (2 years), Scala, Verilog, SQL, and C++ (1 year)
-        </li>
-        <li class = "tab">
-          <strong>AWS:</strong>
-          CloudWatch and IoT Core
-        </li>
-        <li class = "tab">
-          <strong>Cybersecurity:</strong>
+          <strong>Cybersecurity Competitions:</strong>
           <ul>
             <li>
-              Scripting, Linux Terminal, Windows PowerShell, Wireshark, and Autopsy
+              16th nationally as a team in the Collegiate Cyber Defense Competition (2025)
             </li>
             <li>
-              CyberPatriot, HiveStorm, and National Cyber League
+              Top 600 in the National Cyber Defense Competition (2025)
+            </li>
+            <li>
+              Also competed in National Cyber League individual and team competitions
+              from 2023-2025, HiveStorm in 2024, and CyberPatriot in 2020
             </li>
           </ul>
         </li>
+        <li class = "tab">
+          <strong>Skills learned and used from these competitions:</strong>
+          <ul>
+            <li>
+              Active Directory, Scripting, Linux Terminal, Windows PowerShell, HashCat, Wireshark,
+              and Autopsy
+            </li>
+          </ul>
+        </li>
+
+        <li class = "tab">
+          <strong>Programming: </strong>
+          <ul>
+            <li>
+              HTML, CSS, JavaScript (5 years), Java and Python (5 years),
+              Assembly (2 years), Scala, Verilog, SQL, and C++ (1 year)
+            </li>
+          </ul>
+        </li>
+
+        <li class = "tab">
+          <strong>AWS:</strong>
+          <ul>
+            <li>
+              CloudWatch, IoT Core, DynamoDB, and MQTT
+            </li>
+          </ul>
+        </li>
+
         <li class = "tab">
           Construction, Woodworking, CNC Routing, Computer Aided Design, Welding,
           and Vehicle Mechanics
@@ -91,27 +116,36 @@
 
       <!-- List of Personal Projects -->
       <ul>
-      <li>
-        <a href = "../Projects/offGridCalc.html">Off-Grid Calculator Project</a>
-        <ul>
-          <li>
-            Webpage to help off-grid and solar-powered homeowners receive a recommendation
-            for how many solar panels and batteries are needed to run their homes with the
-            click of a button (HTML, CSS, JS)
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="../Projects/coffeeCalculator.html">Coffee Calculator</a>
-        <ul>
-          <li>
-            Co-created as project manager this program for start-up baristas who want a quicker
-            and easier way to calculate their revenue and profit (based on Starbucks’ drinks
-            and estimated cost to make each drink) as well as help with keeping track of inventory.
-          </li>
-        </ul>
-      </li>
-    </ul>
+        <li>
+          <a class = "inline_hyperlink" href="">Decible Detector (2024)</a>
+          <ul>
+            <li>
+              IoT device pushing data to AWS' CloudWatch using MQTT to remotely monitor decibel readings
+              to select a quiet study space. (JavaScript, ESP32, AWS MQTT, IoT)
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a class = "inline_hyperlink" href = "../Projects/offGridCalc.html">Off-Grid Calculator Project (2020)</a>
+          <ul>
+            <li>
+              Webpage to help off-grid and solar-powered homeowners receive a recommendation
+              for how many solar panels and batteries are needed to run their homes with the
+              click of a button (HTML, CSS, JS)
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a class = "inline_hyperlink" href="../Projects/coffeeCalculator.html">Coffee Calculator (2019)</a>
+          <ul>
+            <li>
+              Co-created as project manager this program for start-up baristas who want a quicker
+              and easier way to calculate their revenue and profit (based on Starbucks’ drinks
+              and estimated cost to make each drink) as well as help with keeping track of inventory.
+            </li>
+          </ul>
+        </li>
+      </ul>
 
 
       <br>

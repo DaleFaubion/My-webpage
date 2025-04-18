@@ -31,21 +31,22 @@ html {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  width: 75%;
+  width: 65vw;
   margin-top: 5%;
   color: black;
 }
 .paragraph_left{
   text-align: left;
-  margin-left: 5%;
+  margin-left: 5vw;
   color: black;
 }
 .tab{
-  margin-left: 7%;
+  margin-left: 7vw;
 }
 .minor_paragraph{
   text-align: center;
-  margin-left: 1%;
+  margin-left: 5vw;
+  width: 65vw;
   color: #262626;
 }
 /* Class for centering images*/
@@ -77,6 +78,17 @@ html {
   border-radius: 10px; /* Round the corners */
 }
 
+.inline_hyperlink{
+  display: inline;
+  color: #0077e6;
+  text-align: match-parent;
+}
+.inline_hyperlink:hover{
+  display: inline;
+  text-decoration: underline;
+  text-align: match-parent;
+}
+
 
 
 /**           NAV BAR           */
@@ -103,7 +115,7 @@ html {
   font-size: 90%;
 }
 /* styles the nav bar */
-li a {
+.nav_a {
   display: block;
   color: #b3daff;
   text-align: center;
@@ -112,8 +124,13 @@ li a {
 }
 
 /* Change the color of nav on hover*/
-li a:hover {
+.nav_a:hover {
   background-color:#0077e6;
+}
+
+/* Makes the active tab on the nav bar a lighter col */
+.nav_a:active {
+  background-color: #004280;
 }
 
 .hyperlink{
@@ -126,10 +143,7 @@ li a:hover {
   color: #002dcd;
   text-align: match-parent;
 }
-/* Should make the active tab on the nav bar a lighter color*/
-.active {
-  background-color: #004280;
-}
+
 
 /* Makes the horizontal rule bigger and makes the page have a more professional and divided feel*/
 .line {
