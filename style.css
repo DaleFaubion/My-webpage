@@ -49,6 +49,16 @@ html {
   width: 65vw;
   color: #262626;
 }
+
+.title_paragraph{
+  text-align: center;
+  margin: auto;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  width: 65vw;
+  color: #262626;
+}
+
 /* Class for centering images*/
 .center {
   display: block;
