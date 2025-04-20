@@ -4,7 +4,7 @@
 }
 
 body{
-  background-image: url(https://s3.us-east-1.amazonaws.com/faubion.com/43589.JPEG);
+  background-image: url(https://s3.us-east-1.amazonaws.com/faubion.com/Images/43589.JPEG);
   margin-left: 0;
   margin-right: 0;
   background-repeat: no-repeat;
@@ -59,6 +59,10 @@ html {
   color: #262626;
 }
 
+.list_text {
+  width: 55vw;
+}
+
 /* Class for centering images*/
 .center {
   display: block;
@@ -69,7 +73,7 @@ html {
   padding-top: 8vh;
   text-align: center;
 }
-/* Class for centering images that are smaller*/
+/* Class for centering images that are smaller */
 .minor_center {
   display: block;
   margin-left: auto;
@@ -80,7 +84,7 @@ html {
 }
 
 /* Styles the resume page to have the white background to make the text more readable. */
-.resume {
+.background_mask {
   background-color: rgba(240, 246, 253, 0.5);
   /* Center it */
   display: block;
