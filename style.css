@@ -59,6 +59,14 @@ html {
   color: #262626;
 }
 
+.paragraph_title{
+  text-align: center;
+  margin: auto;
+  padding-top: 5vh;
+  width: 65vw;
+  color: #262626;
+}
+
 .list_text {
   width: 55vw;
 }
