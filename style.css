@@ -85,7 +85,7 @@ html {
 
 /* Styles the resume page to have the white background to make the text more readable. */
 .background_mask {
-  background-color: rgba(240, 246, 253, 0.5);
+  background-color: rgba(240, 246, 253, 0.6);
   /* Center it */
   display: block;
   width: 75vw;
