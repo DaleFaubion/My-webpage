@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CIFAR-10 CNN Demo</title>
+</head>
+<body>
+<h1>CIFAR-10 Image Classifier</h1>
+
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" name="image" required>
+    <button type="submit">Predict</button>
+</form>
+
+{% if results %}
+<h2>Ensemble Prediction:</h2>
+<p><strong>{{ results.ensemble.class }}</strong> ({{ results.ensemble.confidence }}%)</p>
+
+<h3>Individual Models:</h3>
+<ul>
+    {% for pred in results.individual %}
+    <li>{{ pred.model }} → {{ pred.class }} ({{ pred.confidence }}%)</li>
+    {% endfor %}
+</ul>
+{% endif %}
+</body>
+</html>
