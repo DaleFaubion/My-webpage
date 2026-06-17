@@ -9,9 +9,9 @@ app = Flask(__name__)
 
 # Load models once at startup
 models = [
-    load_model("App/models/Best_model.h5"),
-    load_model("App/models/Best_second_model.h5"),
-    load_model("App/models/Best_third_model.h5")
+    load_model("App/models/Best_model.keras"),
+    load_model("App/models/Best_second_model.keras"),
+    load_model("App/models/Best_third_model.keras")
 ]
 
 # CIFAR-10 labels
