@@ -7,12 +7,17 @@ from PIL import Image
 
 app = Flask(__name__)
 
-# Load models once at startup
-models = [
-    load_model("App/models/Best_model.h5"),
-    load_model("App/models/Best_second_model.h5"),
-    load_model("App/models/Best_third_model.h5")
-]
+models = None
+def get_models():
+    global models
+    if models is None:
+        from tensorflow.keras.models import load_model
+        models = [
+            load_model("models/Best_model.h5"),
+            load_model("models/model2.h5"),
+            load_model("models/model3.h5")
+        ]
+    return models
 
 # CIFAR-10 labels
 cifar10_labels = {
@@ -47,6 +52,8 @@ def index():
 
             predictions = []
             raw_preds = []
+
+            models = get_models()
 
             # Individual model predictions
             for i, model in enumerate(models):
