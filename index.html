@@ -6,153 +6,254 @@
 <html>
 
 <head>
-  <title>Dale Faubion</title>
-  <link rel="icon" href="" type="image/x-icon" />
+    <title>Dale Faubion</title>
+    <link rel="icon" href="" type="image/x-icon"/>
 
-  <!-- meta data for connecting the js and css sheets to the html body  -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <link href="style.css" rel="stylesheet" type="text/css" />
+    <!-- meta data for connecting the js and css sheets to the html body  -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="style.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
 
-  <!-- The nav bar from W3Schools  -->
-  <ul class="top_list">
-    <li class="top_list_item"><a class="nav_a active" href="#home">Home</a></li>
-    <li class="top_list_item"><a class="nav_a" href="resume.html">Resume</a></li>
-    <li class="top_list_item"><a class="nav_a" href="otherProjects.html">Projects</a></li>
-    <li class="top_list_right"><a class="nav_a" href="https://www.linkedin.com/in/dale-faubion">LinkedIn</a></li>
-    <li class="top_list_right"><a class="nav_a" href="https://github.com/DaleFaubion">GitHub</a></li>
-  </ul>
+<!-- The nav bar from W3Schools  --
+<ul class="top_list">
+  <li class="top_list_item"><a class="nav_a active" href="#home">Home</a></li>
+  <li class="top_list_item"><a class="nav_a" href="resume.html">Resume</a></li>
+  <li class="top_list_item"><a class="nav_a" href="otherProjects.html">Projects</a></li>
+  <li class="top_list_right"><a class="nav_a" href="https://www.linkedin.com/in/dale-faubion">LinkedIn</a></li>
+  <li class="top_list_right"><a class="nav_a" href="https://github.com/DaleFaubion">GitHub</a></li>
+</ul>
+-->
+
+<div class="hero">
+    <h1>Dale Faubion</h1>
+    <p class="hero-subtitle">
+        Computer Science Graduate • Top 5% in Cybersecurity • AI & Embedded Systems
+        <br>
+        Currently doing applied AI research and AI engineering this summer, and will be available to start
+        full-time in September 2026
+    </p>
+
+    <div class="hero-buttons">
+        <a href="resume.html" class="btn btn-outline">View Resume</a>
+        <a href="#projects" class="btn btn-outline">View Projects</a>
+        <a href="#cyber" class="btn btn-outline">View Cybersecurity Competitions</a>
+    </div>
+</div>
 
 
-<!--  <div class="">-->
-<!--    <img alt="Picture of me" class="slideImg" src="https://s3.us-east-1.amazonaws.com/faubion.com/DSC_2639.JPG">-->
-<!--  </div>-->
-  <h1 class="title">Dale Faubion</h1>
-  <h2 class="title_paragraph"> I'm doing applied AI research and AI engineering this summer, and I am available to start full-time in September 2026</h2>
+<h2 class="paragraph_title">Vineyard Yield Prediction Machine Learning Project</h2>
+<div class="vid_background">
 
-  <hr class="line">
-
-
-  <div class="background_mask">
-
-    <h2 class="paragraph_title">Vineyard Yield Prediction Machine Learning Project</h2>
     <div class="center_vid_container">
-      <iframe class="center_vid" src="https://www.youtube.com/embed/mI3xbz8M73w?si=UGFI5upmqz7w5kGu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-      <p class="minor_paragraph"><strong>
-      The VineTech project is designed to help vintners (vineyard owners) to accurately predict how many tons of grapes
-      will be harvested from the vineyard via images collected throughout the growing season which are sent through a
-      Machine Learning algorithm.
-      <br>
-      Utilizing the FarmNG's Amiga Rover, our team first reduced the track width to a record low of just under 30 inches,
-      then got to work on adapting the legacy system's software and hardware to the new rover.
-      <br>
-      A major challenge I solved was overcoming a safety measure built in by FarmNG Robotics, which reset the files and
-      configurations of the rover to a factory default each time the rover is power cycled, thus wiping any updates and
-      changes to the rover we performed. After finding a non-standard workaround, we were able to get the right BlueTooth
-      services running to allow the rover to connect to the GoPros used for image collection. Our team developed an app
-      on the Amiga's Brain (built in Ubuntu computer) which allows any user to start and stop capturing images in the field.
-      <br>
-      The project utilizes a Machine Learning algorithm developed by Dr. J. Walker Orr, one of our project advisors. The
-      algorithm receives images divided into bays and rows, outputting a prediction of how many pounds of grapes will be
-      produced by each bay of vines, which has proved an error rate of only 10%.
-    </strong></p>
-
-    <h2 class="title_paragraph">Projects and what I'm up to these days:</h2>
-
-
-    <!-- Slideshow container -->
-    <div class="slideshow-container">
-
-      <!-- Full-width images with number and caption text -->
-      <div class="mySlides fade">
-        <a href="otherProjects.html#Off-Grid-Calculator">
-          <img alt="Off-Grid Calculator project showcase" class="slideImg" src="Images/Off-Grid Calc cover 3.png">
-        </a>
-        <div class="text">Click to learn more!</div>
-      </div>
-
-      <div class="mySlides fade">
-        <a href="otherProjects.html#Coffee-Calculator">
-          <img alt="Coffee Calculator project showcase" class="slideImg" src="Images/Coffee Calc Cover.PNG">
-        </a>
-        <div class="text">Click to learn more!</div>
-      </div>
-
-      <div class="mySlides fade">
-        <a href="otherProjects.html#Decibel-Detector">
-          <img alt="Decibel Detector project showcase" class="slideImg" src="Images/DecibleSensor.jpg">
-        </a>
-        <div class="text">Click to learn more!</div>
-      </div>
-
-    </div>
-    <br>
-
-    <!-- The dots/circles -->
-    <div style="text-align:center">
-      <span class="dot" onclick="showSlides(1)"></span>
-      <span class="dot" onclick="showSlides(2)"></span>
-      <span class="dot" onclick="showSlides(3)"></span>
+        <iframe class="center_vid" src="https://www.youtube.com/embed/mI3xbz8M73w?si=UGFI5upmqz7w5kGu"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 
+    <div class="project-text">
 
-    <!-- Cyber Competitions Section     -->
-    <h2 class = "paragraph"><strong>Cybersecurity Competition Score Cards</strong></h2>
-    <hr class = "line">
+        <p>
+            The VineTech project helps vintners accurately predict grape yield using images collected throughout the
+            growing
+            season and processed through a machine learning pipeline.
+        </p>
 
-    <ul>
-      <!-- Senior Year -->
-      <li class = "tab">
-        <strong>455 (top 6%) </strong> National Cyber League Individual Spring Game (2026) - <a href="Files/26Dale Faubion - Cyber Skyline ReportSpringIndiv.pdf"> Score Report (pdf)</a>
-      </li>
-      <li class = "tab">
-        <strong>37th in Experienced Bracket (top 1%) </strong> (81st Overall) National Cyber League Team Spring Game (2026) - <a href="Files/26Dale Faubion - Cyber Skyline ReportSpringTeam.pdf"> Score Report (pdf)</a>
-      </li>
-      <li class = "tab">
-        <strong>442nd (top 5%) </strong> National Cyber League Individual Fall Game (2025) - <a href="Files/25Dale Faubion - Cyber Skyline ReportFallIndividual.pdf"> Score Report (pdf)</a>
-      </li>
-      <li class = "tab">
-        <strong>200th (top 4%) </strong> National Cyber League Team Fall Game (2025) - <a href="Files/25Dale Faubion - Cyber Skyline ReportFallTeam.pdf"> Score Report (pdf)</a>
-      </li>
-      <!-- Junior Year -->
-      <li class = "tab">
-        <strong>550th (top 6%) </strong> National Cyber League Individual Spring Game (2025) - <a href="https://s3.us-east-1.amazonaws.com/faubion.com/Images/NCL+Individual+Spring+Game+2025.pdf"> Score Report (pdf)</a>
-      </li>
-      <li class = "tab">
-        <strong>51st (top 1%) </strong> National Cyber League Team Spring Game (2025) - <a href="https://s3.us-east-1.amazonaws.com/faubion.com/Images/NCL+Team+Spring+Game+2025.pdf"> Score Report (pdf)</a>
-      </li>
-      <li class = "tab">
-        <strong>23rd (top 11%) </strong> National Cyber League CyberSEED Team Game (2025) - <a href="https://s3.us-east-1.amazonaws.com/faubion.com/Images/NCL+Team+CyberSEED+Game+2025.pdf"> Score Report (pdf)</a>
-      </li>
-      <li class = "tab">
-        <strong>1350th (top 16%) </strong> National Cyber League Individual Fall Game (2024) - <a href="https://s3.us-east-1.amazonaws.com/faubion.com/Images/NCL+Individual+Fall+Game+2024.pdf"> Score Report (pdf)</a>
-      </li>
-      <li class = "tab">
-        <strong>152nd (top 3%) </strong> National Cyber League Team Fall Game (2024) - <a href="https://s3.us-east-1.amazonaws.com/faubion.com/Images/NCL+Team+Fall+Game+2024.pdf"> Score Report (pdf)</a>
-      </li>
-    </ul>
+        <h3>My Contributions</h3>
+        <p>
+            I modified the FarmNG Amiga Rover by adapting legacy hardware/software to function on the new platform.
+        </p>
 
-    <br>
+        <p>
+            I solved a major system limitation where the rover reset to factory defaults on every power cycle. By
+            implementing a non-standard workaround, I preserved configurations and enabled persistent system updates.
+        </p>
+
+        <h3>System Integration</h3>
+        <p>
+            Using OpenGoPro, I enabled Bluetooth communication between the rover’s Ubuntu-based brain and multiple GoPro
+            cameras. I also helped develop an onboard application allowing users to start and stop image capture in the
+            field.
+        </p>
+
+        <h3>Machine Learning</h3>
+        <p>
+            The system uses a model developed by Dr. J. Walker Orr to analyze vineyard images segmented by bays and
+            rows,
+            achieving an approximate 10% error rate in yield prediction.
+        </p>
+
+    </div>
+</div>
+
+
+<h2 class="paragraph_title"><a id="projects">Projects</a></h2>
+<!-- Beginning of Projects Section. -->
+<div class="project-container">
+
+
+    <!-- Project 1 -->
+    <div class="project-card">
+        <img src="/Images/RoverSideShot.png" alt="VineTech Rover">
+        <div class="project-content">
+            <h3>VineTech Yield Prediction Rover</h3>
+            <p class="project-meta">College Research Project • 2025-2026</p>
+            <p>
+                Developed a yield prediction rover based on the FarmNG Amiga rover frame.
+                Integrated GoPro cameras to collect image data to feed to the ML algorithm.
+                Focused on reliable and simple operation.
+            </p>
+            <p class="tech">
+                Embedded Systems • OpenGoPRo API • Python • Robotics • Wireless Communication •
+                Machine Learning • ROS • Bluetooth
+            </p>
+        </div>
+    </div>
+
+    <!-- Project  -->
+    <div class="project-card">
+        <img src="/Images/DecibleSensor.jpg" alt="Decibel Detector">
+        <div class="project-content">
+            <h3>Decibel Detector</h3>
+            <p class="project-meta">College Project • 2024</p>
+            <p>
+                Built an IoT device to measure and report noise levels in study spaces.
+                Used MQTT to send data to AWS. Learned IoT communication and cloud integration.
+            </p>
+            <p class="tech">JavaScript • AWS • MQTT • IoT</p>
+        </div>
+    </div>
+
+    <!-- Project -->
+    <div class="project-card">
+        <img src="/Images/Off-Grid Calc cover 3.png" alt="Off Grid Calculator">
+        <div class="project-content">
+            <h3>
+                <a href="offGridCalc.html">Off-Grid Calculator</a>
+            </h3>
+            <p class="project-meta">High School Solo Project • 2020</p>
+            <p>
+                Web app that calculates solar panel and battery requirements based on appliance usage for those
+                looking to switch to off-the-grid living but do not know what they need.
+            </p>
+            <p class="tech">JavaScript • CSS • HTML</p>
+        </div>
+    </div>
+
+    <!-- Project -->
+    <div class="project-card">
+        <img src="/Images/Coffee Calc Cover.PNG" alt="Coffee Calculator">
+        <div class="project-content">
+            <h3>
+                <a href="coffeeCalculator.html">Coffee Calculator</a>
+            </h3>
+            <p class="project-meta">High School Team Project • 2019</p>
+            <p>
+                Built a tool for baristas to estimate profit and track inventory. Served as project manager.
+            </p>
+            <p class="tech">JavaScript • HTML</p>
+        </div>
+    </div>
+</div>
+
+
+<h2 class="paragraph_title"><a id="cyber">Cybersecurity Competitions </a></h2>
+<div class="cyber-highlight">
+
+  <div class="highlight-card">
+    <h3>Top 1%</h3>
+    <p>NCL Team Spring 2026</p>
+    <span>37th (Experienced Bracket)</span>
   </div>
 
+  <div class="highlight-card">
+    <h3>Top 4%</h3>
+    <p>NCL Team Fall 2025</p>
+    <span>200th Overall</span>
+  </div>
 
+  <div class="highlight-card">
+    <h3>Top 5%</h3>
+    <p>NCL Individual Fall 2025</p>
+    <span>442nd Overall</span>
+  </div>
 
-  <script src="script.js"></script>
+  <div class="highlight-card">
+    <h3>16th</h3>
+    <p>CCDC Nationals 2025</p>
+    <span></span>
+  </div>
+
+</div>
+
+<div class="cyber-history">
+
+  <h3>Competition History</h3>
+
+  <div class="cyber-item">
+    <strong>NCL Spring 2026 – Individual</strong>
+    <span>455 (Top 6%)</span>
+    <a href="Files/26Dale Faubion - Cyber Skyline ReportSpringIndiv.pdf">Report</a>
+  </div>
+
+  <div class="cyber-item">
+    <strong>NCL Spring 2026 – Team</strong>
+    <span>37th (Top 1%)</span>
+    <a href="Files/26Dale Faubion - Cyber Skyline ReportSpringTeam.pdf">Report</a>
+  </div>
+
+  <div class="cyber-item">
+    <strong>NCL Fall 2025 – Team</strong>
+    <span>200th (Top 4%)</span>
+    <a href="Files/25Dale Faubion - Cyber Skyline ReportFallTeam.pdf">Report</a>
+  </div>
+
+  <div class="cyber-item">
+    <strong>NCL Spring 2025 – Individual</strong>
+    <span>550th (Top 6%)</span>
+    <a href="https://s3.us-east-1.amazonaws.com/faubion.com/Images/NCL+Individual+Spring+Game+2025.pdf">Report</a>
+  </div>
+
+  <div class="cyber-item">
+    <strong>NCL Spring 2025 – Team</strong>
+    <span>51st (Top 1%)</span>
+    <a href="https://s3.us-east-1.amazonaws.com/faubion.com/Images/NCL+Team+Spring+Game+2025.pdf">Report</a>
+  </div>
+
+  <div class="cyber-item">
+    <strong>NCL CyberSEED 2025 - Team</strong>
+    <span>23rd (Top 11%)</span>
+    <a href="https://s3.us-east-1.amazonaws.com/faubion.com/Images/NCL+Team+CyberSEED+Game+2025.pdf">Report</a>
+  </div>
+
+  <div class="cyber-item">
+    <strong>NCL Fall 2024 - Individual</strong>
+    <span>1350th (Top 16%) </span>
+    <a href="https://s3.us-east-1.amazonaws.com/faubion.com/Images/NCL+Individual+Fall+Game+2024.pdf">Report</a>
+  </div>
+
+  <div class="cyber-item">
+    <strong>NCL Fall 2025 - Team</strong>
+    <span>152nd (top 3%)</span>
+    <a href="https://s3.us-east-1.amazonaws.com/faubion.com/Images/NCL+Team+Fall+Game+2024.pdf">Report</a>
+  </div>
+
+</div>
+<br>
+<script src="script.js"></script>
 </body>
 
 
 <footer id="footer">
-  <p>
-    Created By: Dale Faubion
-    <br>
-    All rights reserved (Probably)
-  </p>
+    <p>
+        Created By: Dale Faubion
+        <br>
+        All rights reserved (Probably)
+    </p>
 </footer>
-
 
 
 </html>
