@@ -1,18 +1,20 @@
 * {
-  font-family: "Centaur", serif;
-  font-optical-sizing: auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
 }
 
 body{
-  background-image: url(https://s3.us-east-1.amazonaws.com/faubion.com/Images/43589.JPEG);
-  margin-left: 0;
-  margin-right: 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center bottom;
-
-  /*background-color: 	#F0F8FF;*/
+  background-color: #F0F8FF;
+}
+/* Styles the resume page to have the white background to make the text more readable. */
+.background_mask {
+  background-color: white;
+  width: 800px;
+  max-width: 90%;
+  margin: 60px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
 }
 
 html {
@@ -113,16 +115,6 @@ html {
   width: 25%;
   margin-top: 2%;
   text-align: center;
-}
-
-/* Styles the resume page to have the white background to make the text more readable. */
-.background_mask {
-  background-color: rgba(240, 246, 253, 0.6);
-  /* Center it */
-  display: block;
-  width: 75vw;
-  margin: 8vh auto;
-  border-radius: 10px; /* Round the corners */
 }
 
 .inline_hyperlink{
