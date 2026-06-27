@@ -82,6 +82,7 @@ html {
   padding-top: 8vh;
   text-align: center;
 }
+/* Class for centering video container */
 .center_vid_container {
   height: 40vw;
   width: 75vw;
@@ -92,7 +93,7 @@ html {
   margin-right: auto;
   margin-top: 2%;
 }
-
+/* Class for centering video within container */
 .center_vid {
   width: 70vw;
   max-width: 560px;
