@@ -19,84 +19,79 @@
     <ul class = "top_list">
       <li class = "top_list_item"><a class = "nav_a" href="index.html">Home</a></li>
       <li class = "top_list_item"><a class = "nav_a" href="resume.html">Resume</a></li>
-      <li class = "top_list_item"><a class = "nav_a active" href="#more">Other Projects</a></li>
+      <li class = "top_list_item"><a class = "nav_a active" href="#more">Projects</a></li>
       <li class="top_list_right"><a class = "nav_a" href="https://www.linkedin.com/in/dale-faubion">LinkedIn</a></li>
       <li class="top_list_right"><a class="nav_a" href="https://github.com/DaleFaubion">GitHub</a></li>
     </ul>
     <script src="script.js"></script>
 
     <!-- Beginning of the white background to mask the image, making the text more visible. -->
-    <div class = "background_mask">
-      <br>
 
-      <ul>
-        <!-- Image for the Decibel Detector Project -->
-        <img id = "Decibel-Detector" src="/Images/DecibleSensor.jpg" class="minor_center">
+    <div class="project-container">
 
-        <li class="tab">
+      <!-- Project 1 -->
+      <div class="project-card">
+        <img src="/Images/RoverSideShot.png" alt="VineTech Rover">
+        <div class="project-content">
+          <h3>VineTech Yield Prediction Rover</h3>
+          <p class="project-meta">College Research Project • 2025-2026</p>
+          <p>
+            Developed a yield prediction rover based on the FarmNG Amiga rover frame.
+            Integrated GoPro cameras to collect image data to feed to the ML algorithm.
+            Focused on reliable and simple operation.
+          </p>
+          <p class="tech">
+            Embedded Systems •  OpenGoPRo API • Python • Robotics • Wireless Communication •
+            Machine Learning • ROS • Bluetooth
+          </p>
+        </div>
+      </div>
+
+      <!-- Project  -->
+      <div class="project-card">
+        <img src="/Images/DecibleSensor.jpg" alt="Decibel Detector">
+        <div class="project-content">
           <h3>Decibel Detector</h3>
-          <ul>
-            <li>College project completed in 2024 in Emerging Mobile Technologies</li>
-            <li class = "list_text">
-              Collaborated with a partner to learn the basics of Internet of Things (IoT) devices.
-              Our goal was to create a device to provide a service to students across campus. To
-              accomplish this, we decided to build a device that would allow students to see how
-              quiet study spaces around campus were, deciding where to go study based on the readings
-              accessed via a website. We were able to create the device, gather decibel readings from
-              a room, and push those readings to an Amazon Web Services database via the MQTT client.
-              We were unable to finish the website to pull readings from the device due to time constraints,
-              but were able to learn how to use MQTT to communicate with IoT devices and a bit about
-              how IoT devices work.
-            </li>
-          </ul>
-        </li>
-      </ul>
+          <p class="project-meta">College Project • 2024</p>
+          <p>
+            Built an IoT device to measure and report noise levels in study spaces.
+            Used MQTT to send data to AWS. Learned IoT communication and cloud integration.
+          </p>
+          <p class="tech">JavaScript • AWS • MQTT • IoT</p>
+        </div>
+      </div>
 
-      <br>
-      <hr class = "line">
-      <br>
+      <!-- Project -->
+      <div class="project-card">
+        <img src="/Images/Off-Grid Calc cover 3.png" alt="Off Grid Calculator">
+        <div class="project-content">
+          <h3>
+            <a href="offGridCalc.html">Off-Grid Calculator</a>
+          </h3>
+          <p class="project-meta">High School Solo Project • 2020</p>
+          <p>
+            Web app that calculates solar panel and battery requirements based on appliance usage for those
+            looking to switch to off-the-grid living but do not know what they need.
+          </p>
+          <p class="tech">JavaScript • CSS • HTML</p>
+        </div>
+      </div>
 
-      <ul>
-        <!-- Image for Off-Grid Calculator Project-->
-        <img id = "Off-Grid-Calculator" src="/Images/Off-Grid%20Calc%20cover%203.png" class="minor_center">
-
-        <li class = "tab">
-          <h3><a class = "inline_hyperlink" href = "offGridCalc.html">Off-Grid Calculator Project (2020)</a></h3>
-          <ul>
-            <li>High School project completed in 2020.</li>
-            <li class = "list_text">
-              A web application for those looking to switch to off-the-grid living but do not
-              know how many solar panels and batteries they need. Users click buttons to add
-              appliances to estimate their power usage, then click the "Recommend" buttons to
-              get a recommendation for how many solar panels and batteries they need.
-            </li>
-          </ul>
-        </li>
-      </ul>
-
-      <br>
-      <hr class = "line">
-      <br>
-
-      <ul>
-        <!-- Image for Coffee Calculator Project-->
-        <img id = "Coffee-Calculator" src="/Images/Coffee%20Calc%20Cover.PNG" class="minor_center">
-
-        <li class = "tab">
-          <h3><a class = "inline_hyperlink" href="coffeeCalculator.html">Coffee Calculator</a></h3>
-          <ul>
-            <li>High School project completed in a team of 4 in 2019.</li>
-            <li class = "list_text">
-              Co-created as project manager this program for start-up baristas who want a quicker and easier
-              way to calculate their revenue and profit (based on Starbucks’ drinks and estimated cost to make each drink) as well
-              as help with keeping track of inventory.
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <br>
+      <!-- Project -->
+      <div class="project-card">
+        <img src="/Images/Coffee Calc Cover.PNG" alt="Coffee Calculator">
+        <div class="project-content">
+          <h3>
+            <a href="coffeeCalculator.html">Coffee Calculator</a>
+          </h3>
+          <p class="project-meta">High School Team Project • 2019</p>
+          <p>
+            Built a tool for baristas to estimate profit and track inventory. Served as project manager.
+          </p>
+          <p class="tech">JavaScript • HTML</p>
+        </div>
+      </div>
     </div>
-
     
   </body>
 
@@ -105,7 +100,7 @@
     <p>
       Created By: Dale Faubion
       <br>
-      All rights reserved
+      All rights reserved (Probably)
     </p>
   </footer>
 
