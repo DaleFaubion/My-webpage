@@ -21,6 +21,24 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Project spruce-up */
+.project-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 30px 0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.project-card h3 {
+  margin-top: 15px;
+}
+
 .title{
   text-align: center;
   font-weight: 400;
