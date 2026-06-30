@@ -354,9 +354,24 @@ html {
 
 
 /**           NAV BAR           */
+.social-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
 
+.social-links a {
+  font-size: 1.5rem;
+  color: #444;
+  transition: all 0.2s ease;
+}
 
-/* W3Schools nav bar idea*/
+.social-links a:hover {
+  color: #2563eb;
+  transform: translateY(-2px);
+}
+
 .top_list {
   z-index: 10000;
   list-style-type: none;
