@@ -355,6 +355,7 @@ html {
 
 /**           NAV BAR           */
 .social-links {
+  text-align: center;
   margin-top: 20px;
   display: flex;
   justify-content: center;
