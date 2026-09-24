@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<!-- 
+  Author: Dale Faubion
+  Interactive in-browser demo for CIFAR-10 Convolutional Neural Network
+-->
+<html>
+<head>
+    <title>CIFAR-10 CNN Demo | Dale Faubion</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="In-browser deep learning demo of a Convolutional Neural Network trained on CIFAR-10. Upload any image or test sample images in real-time.">
+    
+    <!-- Core styles matching the website -->
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link href="cnnDemo.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- ONNX Runtime Web for Client-Side Neural Network Inference -->
+    <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Signature Website Top Navigation Bar -->
+    <ul class="top_list">
+        <li class="top_list_item"><a class="nav_a" href="index.html">Home</a></li>
+        <li class="top_list_item"><a class="nav_a" href="resume.html">Resume</a></li>
+        <li class="top_list_item"><a class="nav_a active" href="cnnDemo.html">CNN Demo</a></li>
+        <li class="top_list_right"><a class="nav_a" href="https://www.linkedin.com/in/dale-faubion" target="_blank">LinkedIn</a></li>
+        <li class="top_list_right"><a class="nav_a" href="https://github.com/DaleFaubion" target="_blank">GitHub</a></li>
+    </ul>
+
+    <!-- Main Content Wrapped in Dale's Signature Background Mask -->
+    <div class="background_mask">
+
+        <h1 class="title" style="margin-top: 10px;">CIFAR-10 Image Classifier</h1>
+        <hr class="line">
+
+        <p class="demo-intro">
+            Test my custom-trained Convolutional Neural Network directly in your browser.
+            Upload any photo, drag & drop, paste from clipboard, or click a sample below to see real-time inference with zero server lag.
+        </p>
+
+        <!-- Mode Toggle & Model Status -->
+        <div class="controls-bar">
+            <div class="mode-toggle">
+                <button type="button" id="modeSingle" class="mode-btn active" title="Use the single best optimized CNN model">
+                    <i class="fas fa-bolt"></i> Best Model
+                </button>
+                <button type="button" id="modeEnsemble" class="mode-btn" title="Average predictions across 3 top-performing CNN models">
+                    <i class="fas fa-layer-group"></i> 3-Model Ensemble
+                </button>
+            </div>
+
+            <div class="status-pill">
+                <span id="statusDot" class="status-dot"></span>
+                <span id="statusText">Loading neural network...</span>
+            </div>
+        </div>
+
+        <div class="cnn-demo-container">
+
+            <!-- Interactive Demo Grid -->
+            <div class="demo-grid">
+
+                <!-- Left Column: Input, Samples, and Dual Previews -->
+                <div class="demo-card">
+                    <h3><i class="fas fa-upload"></i> Input Image</h3>
+                    <div class="demo-card-subtitle">Upload a photo or choose an authentic CIFAR-10 test sample.</div>
+
+                    <!-- Drag & Drop Zone -->
+                    <div id="dropzone" class="dropzone" tabindex="0" role="button" aria-label="Upload image">
+                        <i class="fas fa-cloud-upload-alt dropzone-icon"></i>
+                        <div class="dropzone-text">Drop an image here, or click to browse</div>
+                        <div class="dropzone-hint">Supports JPG, PNG, WebP • Or press Ctrl+V to paste</div>
+                        <input type="file" id="fileInput" accept="image/*">
+                    </div>
+
+                    <!-- 1-Click Samples -->
+                    <div class="samples-header">
+                        <span>Click a sample image:</span>
+                        <small style="color: #64748b; font-weight: normal;">CIFAR-10 Test Set</small>
+                    </div>
+                    <div class="samples-grid">
+                        <button type="button" class="sample-item" data-src="Images/cifar10_samples/airplane.png" title="Airplane">
+                            <img src="Images/cifar10_samples/airplane.png" alt="Airplane">
+                            <span>✈️ Plane</span>
+                        </button>
+                        <button type="button" class="sample-item" data-src="Images/cifar10_samples/automobile.png" title="Automobile">
+                            <img src="Images/cifar10_samples/automobile.png" alt="Automobile">
+                            <span>🚗 Auto</span>
+                        </button>
+                        <button type="button" class="sample-item" data-src="Images/cifar10_samples/bird.png" title="Bird">
+                            <img src="Images/cifar10_samples/bird.png" alt="Bird">
+                            <span>🐦 Bird</span>
+                        </button>
+                        <button type="button" class="sample-item" data-src="Images/cifar10_samples/cat.png" title="Cat">
+                            <img src="Images/cifar10_samples/cat.png" alt="Cat">
+                            <span>🐱 Cat</span>
+                        </button>
+                        <button type="button" class="sample-item" data-src="Images/cifar10_samples/deer.png" title="Deer">
+                            <img src="Images/cifar10_samples/deer.png" alt="Deer">
+                            <span>🦌 Deer</span>
+                        </button>
+                        <button type="button" class="sample-item" data-src="Images/cifar10_samples/dog.png" title="Dog">
+                            <img src="Images/cifar10_samples/dog.png" alt="Dog">
+                            <span>🐶 Dog</span>
+                        </button>
+                        <button type="button" class="sample-item" data-src="Images/cifar10_samples/frog.png" title="Frog">
+                            <img src="Images/cifar10_samples/frog.png" alt="Frog">
+                            <span>🐸 Frog</span>
+                        </button>
+                        <button type="button" class="sample-item" data-src="Images/cifar10_samples/horse.png" title="Horse">
+                            <img src="Images/cifar10_samples/horse.png" alt="Horse">
+                            <span>🐴 Horse</span>
+                        </button>
+                        <button type="button" class="sample-item" data-src="Images/cifar10_samples/ship.png" title="Ship">
+                            <img src="Images/cifar10_samples/ship.png" alt="Ship">
+                            <span>🚢 Ship</span>
+                        </button>
+                        <button type="button" class="sample-item" data-src="Images/cifar10_samples/truck.png" title="Truck">
+                            <img src="Images/cifar10_samples/truck.png" alt="Truck">
+                            <span>🚚 Truck</span>
+                        </button>
+                    </div>
+
+                    <!-- Dual Visual Previews -->
+                    <div class="preview-container">
+                        <div class="preview-box">
+                            <div class="preview-label">Original Image</div>
+                            <div class="preview-img-wrapper">
+                                <img id="originalPreview" src="Images/cifar10_samples/airplane.png" alt="Uploaded Image">
+                            </div>
+                            <div id="origDim" class="preview-dim">128 × 128 px</div>
+                        </div>
+
+                        <div class="preview-box">
+                            <div class="preview-label">What the CNN Sees (32×32)</div>
+                            <div class="preview-img-wrapper">
+                                <canvas id="cnnCanvas" width="32" height="32"></canvas>
+                            </div>
+                            <div class="preview-dim">32 × 32 px (Normalized RGB)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Classification Results -->
+                <div class="demo-card">
+                    <h3><i class="fas fa-chart-bar"></i> Predictions</h3>
+                    <div class="demo-card-subtitle">Softmax probability distribution across all 10 CIFAR-10 classes.</div>
+
+                    <!-- Winner Card -->
+                    <div class="winner-card">
+                        <div class="winner-left">
+                            <div id="winnerEmoji" class="winner-emoji">✈️</div>
+                            <div class="winner-info">
+                                <h4 id="winnerClass">Airplane</h4>
+                                <span id="winnerLatency">Inference: 12 ms</span>
+                            </div>
+                        </div>
+                        <div id="winnerConf" class="winner-badge">94.8%</div>
+                    </div>
+
+                    <!-- Probability Bar List -->
+                    <div id="probList" class="prob-list">
+                        <!-- Populated dynamically via JS -->
+                    </div>
+
+                    <!-- Ensemble Breakdown (Shown only in ensemble mode) -->
+                    <div id="ensembleBreakdown" class="ensemble-breakdown" style="display: none;">
+                        <div class="ensemble-title">
+                            <i class="fas fa-users-cog"></i> Individual Model Voting:
+                        </div>
+                        <div class="ensemble-grid">
+                            <div class="model-stat">
+                                <div class="model-stat-title">Model 1</div>
+                                <div id="m1Vote" class="model-stat-val">—</div>
+                            </div>
+                            <div class="model-stat">
+                                <div class="model-stat-title">Model 2</div>
+                                <div id="m2Vote" class="model-stat-val">—</div>
+                            </div>
+                            <div class="model-stat">
+                                <div class="model-stat-title">Model 3</div>
+                                <div id="m3Vote" class="model-stat-val">—</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Architectural & Research Details -->
+            <div class="tech-details">
+                <h3><i class="fas fa-info-circle"></i> About This CNN Research Project</h3>
+                <p>
+                    This Convolutional Neural Network was designed, tuned, and trained from scratch in Python with TensorFlow/Keras 
+                    on 60,000 32x32 labeled images from the CIFAR-10 dataset (50,000 training, 10,000 testing). It was exported directly 
+                    to ONNX format to execute natively inside your browser using WebAssembly and WebGL.
+                </p>
+                <ul>
+                    <li><strong>Architecture:</strong> 3 Convolutional Blocks (Conv2D 32 &rarr; 64 &rarr; 128 filters with 3x3 kernels), each paired with Batch Normalization, ReLU activations, and 2x2 Max Pooling.</li>
+                    <li><strong>Classifier Head:</strong> Flatten &rarr; Dropout (0.5) &rarr; Dense (64 units) &rarr; Dropout (0.5) &rarr; Dense (10 units, Softmax). Totaling 225,930 parameters (~880 KB).</li>
+                    <li><strong>Performance Tradeoffs:</strong> CIFAR-10 images are only 32x32 pixels. When testing with your own photos, images with centered subjects and simple backgrounds achieve the most accurate classifications.</li>
+                </ul>
+                <div class="tech-buttons">
+                    <a href="https://github.com/DaleFaubion/CNN" target="_blank" class="demo-btn">
+                        <i class="fab fa-github"></i> View Model Code on GitHub
+                    </a>
+                    <a href="Files/CNN%20-%20Final%20Presentation.pdf" target="_blank" class="demo-btn-outline">
+                        <i class="fas fa-file-pdf"></i> View Research Presentation
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Signature Website Footer -->
+    <footer id="footer">
+        <p>
+            Created By: Dale Faubion
+            <br>
+            All rights reserved (Probably)
+        </p>
+    </footer>
+
+    <!-- Hidden canvas for image scaling -->
+    <canvas id="processingCanvas" width="32" height="32"></canvas>
+
+    <!-- Interactive Script -->
+    <script src="cnnDemo.js"></script>
+</body>
+</html>
