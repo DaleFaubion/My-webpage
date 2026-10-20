@@ -1,0 +1,6 @@
+# Cloudflare Pages Headers Configuration
+# Required for WebGPU, WebLLM, and SharedArrayBuffer in client-side in-browser inference
+
+/berea/*
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Embedder-Policy: credentialless
