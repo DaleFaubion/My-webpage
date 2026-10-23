@@ -11,6 +11,12 @@
     <button type="submit">Predict</button>
 </form>
 
+{% if error %}
+<div style="color: #b91c1c; background: #fee2e2; border: 1px solid #f87171; padding: 10px; border-radius: 6px; margin: 15px 0; max-width: 500px;">
+    <strong>Error:</strong> {{ error }}
+</div>
+{% endif %}
+
 {% if results %}
 <h2>Ensemble Prediction:</h2>
 <p><strong>{{ results.ensemble.class }}</strong> ({{ results.ensemble.confidence }}%)</p>
