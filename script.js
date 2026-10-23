@@ -43,6 +43,12 @@ function showSlides(n = 0)
     let slides = document.getElementsByClassName("mySlides");
     let dots = document.getElementsByClassName("dot");
 
+    // Exit gracefully if the current page has no slideshow elements
+    if (slides.length === 0)
+    {
+        return;
+    }
+
     // Go through each of the slides and make sure they are hidden
     for (i = 0; i < slides.length; i++)
     {

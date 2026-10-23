@@ -283,19 +283,18 @@ function start(){
             window.alert("Please enter mocha, dark roast, or hot chocolate.");
         }
 
-        var addMoreCoffee = prompt("Do you want to log more coffee to your inventory? (Answer with yes or no)"); //Dale Faubion
+        var morePrompt = prompt("Do you want to log more coffee to your inventory? (Answer with yes or no)"); //Dale Faubion
 
-        if(addMoreCoffee == "yes"){ //Dale Faubion
-            var addMoreCoffee = true;
-        }
-        else { //Dale Faubion
+        if (morePrompt === null || morePrompt.toLowerCase() === "no") {
+            addMoreCoffee = false;
+        } else if (morePrompt.toLowerCase() === "yes") {
+            addMoreCoffee = true;
+        } else {
             var sure = prompt("Are you sure you want to exit? (Answer with yes or no) ");
-            if(sure == "yes"){
-                var addMoreCoffee = false;
-            }
-
-            else {
-                var addMoreCoffee = true;
+            if (sure === null || sure.toLowerCase() === "yes") {
+                addMoreCoffee = false;
+            } else {
+                addMoreCoffee = true;
             }
         }
 
